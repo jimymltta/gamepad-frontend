@@ -28,7 +28,7 @@ const Login = ({ setUser }) => {
         password: password,
       });
 
-      const token = reponse.data.token;
+      const token = response.data.token;
 
       if (token) {
         setUser(token);

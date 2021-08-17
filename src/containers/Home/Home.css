@@ -1,0 +1,86 @@
+.body {
+  margin: 0px;
+}
+
+.main {
+  background-color: #1f2023;
+}
+
+/*---------- TOP BAR ----------*/
+
+.topOfPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeLogoAndTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.homeTitle {
+  color: white;
+  font-size: 100px;
+  font-family: "Exo", sans-serif;
+  font-weight: 400;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input input {
+  width: 500px;
+  height: 40px;
+}
+
+.input input::placeholder {
+  font-size: 18px;
+  font-family: "Exo", sans-serif;
+}
+
+.input span {
+  color: white;
+  margin-top: 20px;
+  font-family: "Exo", sans-serif;
+}
+
+/*---------- GAMES LIST ----------*/
+.gamesMain {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+}
+
+h2 {
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: "Exo", sans-serif;
+}
+
+.gamesList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gameCard {
+  height: 250px;
+  width: 200px;
+  flex: 20%;
+  margin-bottom: 35px;
+}
+
+.gameCard img {
+  height: 250px;
+  width: 200px;
+  object-fit: cover;
+}

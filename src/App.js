@@ -5,9 +5,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Cookies from "js-cookie";
 
 // CONTAINERS & COMPONENTS IMPORTS
-import Home from "./containers/Home";
+import Home from "./containers/Home/Home";
 import Signup from "./containers/Signup";
 import Login from "./containers/Login";
+import Header from "./components/Header/Header";
 
 function App() {
   const [userToken, setUserToken] = useState(Cookies.get("userToken") || null);
@@ -38,7 +39,7 @@ function App() {
           <Login setUser={setUser} />
         </Route>
 
-        <Route>
+        <Route path="/games">
           <Home value={value} />
         </Route>
       </Switch>

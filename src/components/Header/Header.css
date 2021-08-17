@@ -1,0 +1,66 @@
+/*---------- HEADER (LOGGED IN) ---------- */
+.header-loggedin {
+  background-color: black;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  margin-left: 1vw;
+}
+
+.logo-img {
+  height: 10vh;
+}
+
+.logo-title {
+  color: white;
+  font-family: "Exo", sans-serif;
+}
+
+.buttons-logged-in {
+  margin-right: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-logged-in span {
+  margin-right: 1vw;
+}
+
+.user-pic {
+  border-radius: 50%;
+  height: 6vh;
+  margin-right: 1vw;
+}
+
+.signout-btn {
+  width: 8vw;
+  height: 5vh;
+  font-size: 2px;
+}
+
+/*---------- HEADER (NOT LOGGED IN) ---------- */
+.header {
+  background-color: #1f2023;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: #ff4655 4px solid;
+}
+
+.buttons {
+  margin-right: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons Button {
+  margin-left: 1vw;
+}
