@@ -14,6 +14,7 @@
 
 .logo-img {
   height: 10vh;
+  margin-top: 1vh;
 }
 
 .logo-title {
@@ -52,6 +53,8 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: #ff4655 4px solid;
+  position: sticky;
+  top: 0;
 }
 
 .buttons {
@@ -63,4 +66,25 @@
 
 .buttons Button {
   margin-left: 1vw;
+}
+
+/*---------- MODAL ---------- */
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  background: rgba(51, 46, 46, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(33, 33, 34, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.modal p {
+  color: white;
 }

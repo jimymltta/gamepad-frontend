@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import logo from "../../assets/logo.svg";
 import "./Header.css";
 
 // Material UI
 import { Button } from "@material-ui/core";
-import { BackgroundColor } from "chalk";
+import { Modal } from "@material-ui/core";
 
 const Header = ({ userToken, setUser, setValue }) => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   const handleChange = (event) => {
     const value = event.target.value;
     setValue(value);
@@ -68,6 +73,7 @@ const Header = ({ userToken, setUser, setValue }) => {
           My Collection
         </Link>
         <Button
+          onClick={handleOpen}
           variant="contained"
           color="secondary"
           style={{
@@ -78,6 +84,20 @@ const Header = ({ userToken, setUser, setValue }) => {
         >
           Login
         </Button>
+        <Modal open={open} onClose={handleClose}>
+          <div className="modal">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
+              cum veritatis optio hic excepturi error corrupti consequatur
+              magnam, sapiente nostrum doloremque aut ab totam quia ipsam natus
+              eos fugiat sint?
+            </p>
+            <form action="">
+              <input type="text" />
+              <input type="text" />
+            </form>
+          </div>
+        </Modal>
       </div>
     </div>
   );

@@ -6,6 +6,8 @@ import "./Home.css";
 
 // COMPONENTS IMPORTS
 import logo from "../../assets/logo.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 // CONTAINER LOGIC
 const Home = ({ value }) => {
   // STATES
@@ -22,14 +24,14 @@ const Home = ({ value }) => {
           `http://localhost:4000/games?search=${search}&page=${page}`
         );
         setData(response.data.results);
-        console.log("DATA ==>", data);
+        console.log("DATA ==>", response.data);
         setIsLoading(false);
       } catch (error) {
         console.log(error.message);
       }
     };
     fetchData();
-  }, []);
+  }, [page, search]);
 
   return isLoading ? (
     <div className="loading">
@@ -44,6 +46,7 @@ const Home = ({ value }) => {
         </div>
         <div className="input">
           <input type="text" placeholder="Search for a game..." />
+          <FontAwesomeIcon icon="search" className="searchIcon" />
           <span>Search 2349 595 games</span>
         </div>
       </div>
@@ -54,6 +57,7 @@ const Home = ({ value }) => {
             return (
               <div className="gameCard">
                 <img src={game.background_image} alt="" />
+                <h4 className="gameTitle">{game.name}</h4>
               </div>
             );
           })}

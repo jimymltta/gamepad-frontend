@@ -6,9 +6,14 @@ import Cookies from "js-cookie";
 
 // CONTAINERS & COMPONENTS IMPORTS
 import Home from "./containers/Home/Home";
-import Signup from "./containers/Signup";
-import Login from "./containers/Login";
+import Signup from "./containers/Signup/Signup";
+import Login from "./containers/Login/Login";
 import Header from "./components/Header/Header";
+
+// ICONS IMPORTS
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+library.add(faSearch);
 
 function App() {
   const [userToken, setUserToken] = useState(Cookies.get("userToken") || null);
