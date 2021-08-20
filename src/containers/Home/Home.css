@@ -94,6 +94,7 @@ h2 {
   height: 250px;
   width: 200px;
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .gameTitle {

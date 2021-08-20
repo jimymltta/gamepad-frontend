@@ -9,9 +9,10 @@ import logo from "../../assets/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // CONTAINER LOGIC
-const Home = ({ value }) => {
+const Home = () => {
   // STATES
   const [data, setData] = useState();
+  const [count, setCount] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
@@ -24,6 +25,7 @@ const Home = ({ value }) => {
           `http://localhost:4000/games?search=${search}&page=${page}`
         );
         setData(response.data.results);
+        setCount(response.data.count);
         console.log("DATA ==>", response.data);
         setIsLoading(false);
       } catch (error) {
@@ -45,9 +47,13 @@ const Home = ({ value }) => {
           <h1 className="homeTitle">Gamepad</h1>
         </div>
         <div className="input">
-          <input type="text" placeholder="Search for a game..." />
+          <input
+            type="search"
+            placeholder="Search for a game..."
+            onChange={(event) => setSearch(event.target.value)}
+          />
           <FontAwesomeIcon icon="search" className="searchIcon" />
-          <span>Search 2349 595 games</span>
+          <span>search {count} games</span>
         </div>
       </div>
       <div className="gamesMain">
@@ -56,12 +62,32 @@ const Home = ({ value }) => {
           {data.map((game, index) => {
             return (
               <div className="gameCard">
-                <img src={game.background_image} alt="" />
-                <h4 className="gameTitle">{game.name}</h4>
+                <Link to={`/games/${game.id}`}>
+                  <img src={game.background_image} alt="" />
+                  <h4 className="gameTitle">{game.name}</h4>
+                </Link>
               </div>
             );
           })}
         </div>
+      </div>
+
+      <div className="nav-btns">
+        <button
+          onClick={() => {
+            setPage(page - 1);
+          }}
+        >
+          Previous
+        </button>
+
+        <button
+          onClick={() => {
+            setPage(page + 1);
+          }}
+        >
+          Next
+        </button>
       </div>
     </div>
   );

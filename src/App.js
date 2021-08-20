@@ -6,6 +6,7 @@ import Cookies from "js-cookie";
 
 // CONTAINERS & COMPONENTS IMPORTS
 import Home from "./containers/Home/Home";
+import Game from "./containers/Game/Game";
 import Signup from "./containers/Signup/Signup";
 import Login from "./containers/Login/Login";
 import Header from "./components/Header/Header";
@@ -44,8 +45,12 @@ function App() {
           <Login setUser={setUser} />
         </Route>
 
+        <Route path="/games/:id">
+          <Game />
+        </Route>
+
         <Route path="/games">
-          <Home value={value} />
+          <Home setValue={setValue} />
         </Route>
       </Switch>
     </Router>
