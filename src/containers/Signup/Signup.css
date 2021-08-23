@@ -1,4 +1,4 @@
-.login-main {
+.signup-main {
   display: flex;
   flex: 1;
   justify-content: center;
@@ -8,7 +8,7 @@
   margin-top: 20px;
 }
 
-.login-infos {
+.signup-infos {
   background-color: #171717;
   height: 70vh;
   width: 25vw;
@@ -19,14 +19,14 @@
   border-right: 1px solid #eb565b;
 }
 
-.login-infos span {
+.signup-infos span {
   color: white;
   font-family: "Exo", sans-serif;
   width: 20vw;
   margin-bottom: 20px;
 }
 
-.login-div {
+.signup-div {
   background-color: #333435;
   height: 70vh;
   width: 25vw;
@@ -37,19 +37,24 @@
   border-left: 1px solid #eb565b;
 }
 
-.login-div h2 {
+.signup-div h2 {
   align-self: flex-start;
   margin-left: 40px;
 }
 
-.login-form {
+.signup-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.login-form input {
+.password-inputs {
+  display: flex;
+  flex-direction: row;
+}
+
+.long-input {
   width: 20vw;
   height: 30px;
   margin-top: 10px;
@@ -57,12 +62,26 @@
   border-radius: 5px;
 }
 
-.login-form input:focus {
+.long-input:focus {
   outline: none;
   border: 1px solid #eb565b;
 }
 
-.login-form button {
+.short-input {
+  width: 9.6vw;
+  margin-right: 0.3vw;
+  height: 30px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.short-input:focus {
+  outline: none;
+  border: 1px solid #eb565b;
+}
+
+.signup-form button {
   width: 20vw;
   height: 30px;
   border: none;
@@ -70,5 +89,5 @@
   margin-bottom: 10px;
   background-color: #eb565b;
   color: white;
-  margin-top: 20px;
+  font-family: "Exo", sans-serif;
 }

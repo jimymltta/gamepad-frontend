@@ -12,10 +12,7 @@ const Header = ({ userToken, setUser, setValue }) => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const handleChange = (event) => {
-    const value = event.target.value;
-    setValue(value);
-  };
+  console.log("TOKEN HEADER ==>", userToken);
 
   return userToken ? (
     <div className="header-loggedin">
@@ -32,11 +29,16 @@ const Header = ({ userToken, setUser, setValue }) => {
             color: "white",
             marginRight: "1vw",
           }}
+          to="/"
         >
           My Collection
         </Link>
-        <Link style={{ textDecoration: "none", color: "white" }}>
-          <span>Bryan</span>
+        <Link
+          to="/"
+          className="user-profile-link"
+          style={{ textDecoration: "none", color: "white" }}
+        >
+          <span className="user-profile-name">Bryan</span>
           <img
             src="https://thispersondoesnotexist.com/image"
             className="user-pic"
@@ -72,7 +74,7 @@ const Header = ({ userToken, setUser, setValue }) => {
         >
           My Collection
         </Link>
-        <Button
+        {/* <Button
           onClick={handleOpen}
           variant="contained"
           color="secondary"
@@ -83,8 +85,11 @@ const Header = ({ userToken, setUser, setValue }) => {
           }}
         >
           Login
-        </Button>
-        <Modal open={open} onClose={handleClose}>
+        </Button> */}
+        <Link to="/user/signup" className="signupbtn-header">
+          Sign up
+        </Link>
+        {/* <Modal open={open} onClose={handleClose}>
           <div className="modal">
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
@@ -97,7 +102,7 @@ const Header = ({ userToken, setUser, setValue }) => {
               <input type="text" />
             </form>
           </div>
-        </Modal>
+        </Modal> */}
       </div>
     </div>
   );

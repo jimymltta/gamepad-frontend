@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
 import axios from "axios";
+import "./Signup.css";
 
 const Signup = ({ setUser }) => {
   // STATES
@@ -21,6 +22,7 @@ const Signup = ({ setUser }) => {
   const handleEmailChange = (event) => {
     const value = event.target.value;
     setEmail(value);
+    console.log(email);
   };
 
   const handlePasswordChange = (event) => {
@@ -31,11 +33,14 @@ const Signup = ({ setUser }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("urlexample.com/user/signup", {
-        email: email,
-        username: username,
-        password: password,
-      });
+      const response = await axios.post(
+        "https://gamepad-jm.herokuapp.com/user/signup",
+        {
+          email: email,
+          username: username,
+          password: password,
+        }
+      );
 
       const token = response.data.token;
 
@@ -54,21 +59,60 @@ const Signup = ({ setUser }) => {
   };
 
   return (
-    <div className="form-div">
-      <h1>Sign up</h1>
-      <form onSubmit={handleSubmit} className="form">
-        <input type="text" placeholder="Username" onChange={handleNameChange} />
-        <input type="text" placeholder="Email" onChange={handleEmailChange} />
-        <input
-          type="text"
-          placeholder="Password"
-          onChange={handlePasswordChange}
-        />
-        <input type="text" placeholder="Confirm Password" />
-        <p style={{ color: "red" }}>{errorMessage}</p>
-        <button type="submit">Connexion</button>
-        <Link to={"/user/login"}>Already have an account?</Link>
-      </form>
+    <div className="signup-main">
+      <div className="signup-infos">
+        <h2>How it works ?</h2>
+        <span>
+          Log in to your free account to be able to get all features of Gamepad
+        </span>
+        <span>Add a game to your collection</span>
+        <span>Leave a review for a game</span>
+      </div>
+      <div className="signup-div">
+        <h2>Sign up</h2>
+        <div className="form-div">
+          <form onSubmit={handleSubmit} className="signup-form">
+            <input
+              type="text"
+              placeholder="Username"
+              onChange={handleNameChange}
+              className="long-input"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              onChange={handleEmailChange}
+              className="long-input"
+            />
+            <div className="password-inputs">
+              <input
+                type="password"
+                placeholder="Password"
+                onChange={handlePasswordChange}
+                className="short-input"
+              />
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                className="short-input"
+              />
+            </div>
+            <p style={{ color: "red" }}>{errorMessage}</p>
+            <button type="submit">Connexion</button>
+            <Link
+              to={"/user/login"}
+              style={{
+                textDecoration: "none",
+                color: "white",
+                fontFamily: "Exo, sans-serif",
+                fontSize: "12px",
+              }}
+            >
+              Already have an account?
+            </Link>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };

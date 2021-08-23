@@ -22,7 +22,7 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/games?search=${search}&page=${page}`
+          `https://gamepad-jm.herokuapp.com/games?search=${search}&page=${page}`
         );
         setData(response.data.results);
         setCount(response.data.count);
@@ -61,7 +61,7 @@ const Home = () => {
         <div className="gamesList">
           {data.map((game, index) => {
             return (
-              <div className="gameCard">
+              <div className="gameCard" key={index}>
                 <Link to={`/games/${game.id}`}>
                   <img src={game.background_image} alt="" />
                   <h4 className="gameTitle">{game.name}</h4>

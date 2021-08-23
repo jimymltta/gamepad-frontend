@@ -30,7 +30,17 @@
 }
 
 .buttons-logged-in span {
-  margin-right: 1vw;
+  margin-right: 0.5vw;
+}
+
+.user-profile-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-profile-link span {
+  border-left: solid 2px #ff4655;
 }
 
 .user-pic {
@@ -40,7 +50,7 @@
 }
 
 .signout-btn {
-  width: 8vw;
+  width: 7.3vw;
   height: 5vh;
   font-size: 2px;
 }
@@ -67,6 +77,20 @@
 }
 
 .buttons Button {
+  margin-left: 1vw;
+}
+
+.signupbtn-header {
+  text-decoration: none;
+  color: white;
+  border: solid 1px #ff4655;
+  height: 34px;
+  width: 65px;
+  background-color: #ff4655;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
   margin-left: 1vw;
 }
 

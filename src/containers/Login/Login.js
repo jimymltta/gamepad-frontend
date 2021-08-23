@@ -24,10 +24,13 @@ const Login = ({ setUser }) => {
     try {
       event.preventDefault();
 
-      const response = await axios.post("urlexample.com/user/login", {
-        email: email,
-        password: password,
-      });
+      const response = await axios.post(
+        "https://gamepad-jm.herokuapp.com/user/login",
+        {
+          email: email,
+          password: password,
+        }
+      );
 
       const token = response.data.token;
 
@@ -41,22 +44,44 @@ const Login = ({ setUser }) => {
   };
 
   return (
-    <div className="form-div">
-      <form action="">
-        <h1>Log in</h1>
-        <input
-          type="text"
-          placeholder="Email..."
-          onChange={handleEmailChange}
-        />
-        <input
-          type="text"
-          placeholder="Password..."
-          onChange={handlePasswordChange}
-        />
-        <button type="submit">Connexion</button>
-        <Link to={"/user/signup"}>Don't have an account yet?</Link>
-      </form>
+    <div className="login-main">
+      <div className="login-infos">
+        <h2>How it works ?</h2>
+        <span>
+          Log in to your free account to be able to get all features of Gamepad
+        </span>
+        <span>Add a game to your collection</span>
+        <span>Leave a review for a game</span>
+      </div>
+      <div className="login-div">
+        <h2>Log in</h2>
+        <div className="login-form-div">
+          <form onSubmit={handleSubmit} className="login-form">
+            <input
+              type="text"
+              placeholder="Email..."
+              onChange={handleEmailChange}
+            />
+            <input
+              type="text"
+              placeholder="Password..."
+              onChange={handlePasswordChange}
+            />
+            <button type="submit">Connexion</button>
+            <Link
+              to={"/user/signup"}
+              style={{
+                textDecoration: "none",
+                color: "white",
+                fontFamily: "Exo, sans-serif",
+                fontSize: "12px",
+              }}
+            >
+              Don't have an account yet?
+            </Link>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };

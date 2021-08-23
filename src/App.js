@@ -32,10 +32,16 @@ function App() {
       setUserToken(null);
     }
   };
+  console.log("COOKIE ==>", userToken);
 
   return (
     <Router>
-      <Header userToken={userToken} setUser={setUser} setValue={setValue} />
+      <Header
+        userToken={userToken}
+        setUser={setUser}
+        setValue={setValue}
+        value={value}
+      />
       <Switch>
         <Route path="/user/signup">
           <Signup setUser={setUser} />
@@ -49,7 +55,7 @@ function App() {
           <Game />
         </Route>
 
-        <Route path="/games">
+        <Route path="/">
           <Home setValue={setValue} />
         </Route>
       </Switch>

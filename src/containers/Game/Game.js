@@ -5,7 +5,7 @@ import axios from "axios";
 import "./Game.css";
 
 // COMPONENTS IMPORTS
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // CONTAINER LOGIC
 const Game = () => {
@@ -18,7 +18,9 @@ const Game = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/games/${id}`);
+        const response = await axios.get(
+          `https://gamepad-jm.herokuapp.com/games/${id}`
+        );
         setGame(response.data);
         console.log(response.data);
         setIsLoading(false);
@@ -40,7 +42,7 @@ const Game = () => {
           <h2 className="game-title">{game.name}</h2>
           <img
             src={game.background_image}
-            alt="game image"
+            alt="game cover"
             className="game-image"
           />
         </div>
@@ -96,9 +98,7 @@ const Game = () => {
       </div>
       <div className="suggested-games">
         <h2 className="games-like">Games like {game.name}</h2>
-        <h3>Test test</h3>
-        <h3>Test test</h3>
-        <h3>Test test</h3>
+        <div className="sugg-games-cards"></div>
       </div>
     </div>
   );
