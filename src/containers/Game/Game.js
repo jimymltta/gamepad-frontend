@@ -8,7 +8,7 @@ import "./Game.css";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // CONTAINER LOGIC
-const Game = () => {
+const Game = ({ userToken }) => {
   // STATES
   const { id } = useParams();
   const [game, setGame] = useState();
@@ -31,6 +31,26 @@ const Game = () => {
     fetchData();
   }, [id]);
 
+  const addFavorite = async (event) => {
+    try {
+      event.preventDefault();
+      const response = await axios.post(
+        "https://gamepad-jm.herokuapp.com/user/addFavorite",
+        {
+          game: {
+            id: game.id,
+            name: game.name,
+            image: game.background_image,
+          },
+        },
+        {
+          headers: { Authorization: `Bearer ${userToken}` },
+        }
+      );
+      console.log(response.data);
+    } catch (error) {}
+  };
+
   return isLoading ? (
     <div className="loading">
       <span>Loading...</span>
@@ -48,8 +68,10 @@ const Game = () => {
         </div>
         <div className="game-details">
           <div className="game-btns">
-            <button>Save to collection</button>
+            <button onClick={addFavorite}>Save to collection</button>
+            <span className="feature-is-coming">Feature is coming...</span>
             <button>Add a review</button>
+            <span className="feature-is-coming">Feature is coming...</span>
           </div>
           <div className="details-cols">
             <div className="details-left-col">
@@ -70,14 +92,14 @@ const Game = () => {
             <div className="details-right-col">
               <h4>Genre</h4>
               {game.genres.map((elem, index) => (
-                <span>
+                <span key={index}>
                   {elem.name} {index < game.genres.length - 1 ? "," : ""}
                 </span>
               ))}
 
               <h4>Developer</h4>
               {game.developers.map((elem, index) => (
-                <span>
+                <span key={index}>
                   {" "}
                   {elem.name} {index < game.developers.length - 1 ? "," : ""}{" "}
                 </span>
@@ -97,11 +119,43 @@ const Game = () => {
         </div>
       </div>
       <div className="suggested-games">
-        <h2 className="games-like">Games like {game.name}</h2>
-        <div className="sugg-games-cards"></div>
+        <h2 className="games-like" style={{ marginLeft: "5vw" }}>
+          Games like {game.name}
+        </h2>
+        <div className="sugg-games-cards">
+          <h3>Feature is coming...</h3>
+        </div>
+      </div>
+      <div className="game-reviews">
+        <h2 style={{ marginLeft: "5vw" }}>Reviews</h2>
+        <h3>Feature is coming...</h3>
       </div>
     </div>
   );
 };
 
 export default Game;
+
+// async () => {
+//   try {
+//     const response = await axios.post(
+//       "https://gamepad-jm.herokuapp.com/user/addFavorite",
+//       {
+//         token: userToken,
+//         game: {
+//           id: game.id,
+//           name: game.name,
+//           image: game.background_image,
+//         },
+//       },
+//       {
+//         headers: {
+//           Authorization: `Bearer ${userToken}`,
+//         },
+//       }
+//     );
+//     console.log(response);
+//   } catch (error) {
+//     console.log(error.response);
+//   }
+// }

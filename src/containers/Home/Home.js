@@ -7,6 +7,11 @@ import "./Home.css";
 // COMPONENTS IMPORTS
 import logo from "../../assets/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSearch,
+  faArrowAltCircleRight,
+  faArrowAltCircleLeft,
+} from "@fortawesome/free-solid-svg-icons";
 
 // CONTAINER LOGIC
 const Home = () => {
@@ -74,19 +79,29 @@ const Home = () => {
 
       <div className="nav-btns">
         <button
+          // className="nav-btn"
           onClick={() => {
             setPage(page - 1);
           }}
         >
-          Previous
+          <FontAwesomeIcon
+            icon={faArrowAltCircleLeft}
+            size="3x"
+            className="nav-btn"
+          />
         </button>
 
         <button
+          // className="nav-btn"
           onClick={() => {
             setPage(page + 1);
           }}
         >
-          Next
+          <FontAwesomeIcon
+            icon={faArrowAltCircleRight}
+            size="3x"
+            className="nav-btn"
+          />
         </button>
       </div>
     </div>

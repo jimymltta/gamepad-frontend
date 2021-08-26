@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 import logo from "../../assets/logo.svg";
 import "./Header.css";
 
 // Material UI
 import { Button } from "@material-ui/core";
-import { Modal } from "@material-ui/core";
+// import { Modal } from "@material-ui/core";
 
-const Header = ({ userToken, setUser, setValue }) => {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+const Header = ({ userToken, setUser, setValue, user }) => {
+  // const [open, setOpen] = useState(false);
+  // const handleOpen = () => setOpen(true);
+  // const handleClose = () => setOpen(false);
 
   console.log("TOKEN HEADER ==>", userToken);
 
@@ -38,7 +38,7 @@ const Header = ({ userToken, setUser, setValue }) => {
           className="user-profile-link"
           style={{ textDecoration: "none", color: "white" }}
         >
-          <span className="user-profile-name">Bryan</span>
+          <span className="user-profile-name">{user.username}</span>
           <img
             src="https://thispersondoesnotexist.com/image"
             className="user-pic"

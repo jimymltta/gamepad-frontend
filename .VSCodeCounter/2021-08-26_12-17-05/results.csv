@@ -1,0 +1,22 @@
+"filename", "language", "CSS", "JavaScript", "XML", "comment", "blank", "total"
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/App.css", "CSS", 5, 0, 0, 1, 1, 7
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/App.js", "JavaScript", 0, 57, 0, 4, 11, 72
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/assets/logo.svg", "XML", 0, 0, 13, 0, 0, 13
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/components/Header/Header.css", "CSS", 98, 0, 0, 3, 16, 117
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/components/Header/Header.js", "JavaScript", 0, 78, 0, 28, 6, 112
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/components/Modal/SignupModal.js", "JavaScript", 0, 22, 0, 0, 3, 25
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/components/Reviews/Reviews.css", "CSS", 0, 0, 0, 0, 1, 1
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/components/Reviews/Reviews.js", "JavaScript", 0, 11, 0, 0, 3, 14
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Collection/Collection.css", "CSS", 0, 0, 0, 0, 1, 1
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Collection/Collection.js", "JavaScript", 0, 74, 0, 2, 6, 82
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Game/Game.css", "CSS", 103, 0, 0, 3, 19, 125
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Game/Game.js", "JavaScript", 0, 114, 0, 29, 12, 155
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Home/Home.css", "CSS", 90, 0, 0, 2, 17, 109
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Home/Home.js", "JavaScript", 0, 84, 0, 5, 8, 97
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Login/Login.css", "CSS", 66, 0, 0, 0, 9, 75
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Login/Login.js", "JavaScript", 0, 78, 0, 1, 11, 90
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Signup/Signup.css", "CSS", 82, 0, 0, 0, 12, 94
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Signup/Signup.js", "JavaScript", 0, 107, 0, 3, 11, 121
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/index.css", "CSS", 0, 0, 0, 1, 1, 2
+"/Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/index.js", "JavaScript", 0, 10, 0, 0, 2, 12
+"Total", "-", 444, 635, 13, 82, 150, 1324

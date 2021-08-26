@@ -1,0 +1,40 @@
+Date : 2021-08-25 15:18:31
+Directory : /Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers
+Total : 10 files,  776 codes, 22 comments, 105 blanks, all 903 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |          5 |        435 |         17 |         47 |        499 |
+| CSS        |          5 |        341 |          5 |         58 |        404 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                              | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                 |         10 |        776 |         22 |        105 |        903 |
+| Collection                                                                                                        |          2 |         71 |          2 |          8 |         81 |
+| Game                                                                                                              |          2 |        198 |          9 |         29 |        236 |
+| Home                                                                                                              |          2 |        174 |          7 |         25 |        206 |
+| Login                                                                                                             |          2 |        144 |          1 |         20 |        165 |
+| Signup                                                                                                            |          2 |        189 |          3 |         23 |        215 |
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                          | language   | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Collection/Collection.css | CSS        |          0 |          0 |          1 |          1 |
+| /Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Collection/Collection.js  | JavaScript |         71 |          2 |          7 |         80 |
+| /Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Game/Game.css             | CSS        |        103 |          3 |         19 |        125 |
+| /Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Game/Game.js              | JavaScript |         95 |          6 |         10 |        111 |
+| /Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Home/Home.css             | CSS        |         90 |          2 |         17 |        109 |
+| /Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Home/Home.js              | JavaScript |         84 |          5 |          8 |         97 |
+| /Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Login/Login.css           | CSS        |         66 |          0 |          9 |         75 |
+| /Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Login/Login.js            | JavaScript |         78 |          1 |         11 |         90 |
+| /Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Signup/Signup.css         | CSS        |         82 |          0 |         12 |         94 |
+| /Users/jimymarletta/LeReacteur/PROJET RÉPLIQUE/GamePad/gamepad-frontend/src/containers/Signup/Signup.js          | JavaScript |        107 |          3 |         11 |        121 |
+| Total                                                                                                             |            |        776 |         22 |        105 |        903 |
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

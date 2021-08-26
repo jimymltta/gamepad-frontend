@@ -119,6 +119,30 @@
   color: white;
 }
 
+.feature-is-coming {
+  font-family: "Game of thrones", serif;
+  color: white;
+}
+
+.suggested-games {
+  background-color: #1f2023;
+}
+
+.suggested-games h3 {
+  font-family: "Game of thrones", serif;
+  color: white;
+  margin-left: 5vw;
+}
+
+.game-reviews {
+  background-color: #1f2023;
+}
+
+.game-reviews h3 {
+  font-family: "Game of thrones", serif;
+  color: white;
+  margin-left: 5vw;
+}
 /*---------- GAMES SUGGESTIONS ----------*/
 /* .suggested-games {
 } */
